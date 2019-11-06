@@ -1,5 +1,5 @@
 {% set name = "redbiom" %}
-{% set version = "0.3.4" %}
+{% set version = "0.3.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/biocore/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: b5a1f8a8e6d81159fbe639cffd2aff0abffc769247997ff19f1f36755c1f9da7
+  sha256: a4761b9bad7257f4f938d39ed786a5ecb072586c399519e02a695f52787b016d
 
 build:
   noarch: python
