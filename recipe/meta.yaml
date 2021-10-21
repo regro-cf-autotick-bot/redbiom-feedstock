@@ -1,5 +1,5 @@
 {% set name = "redbiom" %}
-{% set version = "0.3.5" %}
+{% set version = "0.3.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/biocore/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: a4761b9bad7257f4f938d39ed786a5ecb072586c399519e02a695f52787b016d
+  sha256: 5d0384bac5f0eb7fb1110bdbb38dcca86af0a05f4a32064368562797057424fc
 
 build:
   noarch: python
@@ -23,17 +23,17 @@ requirements:
 
   run:
     - python >=3.5
-    - click 
+    - click
     - h5py
     - {{ pin_compatible('numpy') }}
-    - scipy 
-    - pandas 
+    - scipy
+    - pandas
     - biom-format >=2.1.5
     - nltk
     - joblib
     - requests
     - scikit-bio >=0.4.2
-      
+
 test:
   imports:
     - redbiom
@@ -41,7 +41,7 @@ test:
 
   commands:
     - redbiom --help
-    
+
 about:
   home: https://github.com/biocore/redbiom
   license: BSD-3
@@ -59,4 +59,4 @@ about:
     Gavin Huttley, Rob Knight mSystems 2019, 4:4."
 extra:
   recipe-maintainers:
-      - wasade
+    - wasade
