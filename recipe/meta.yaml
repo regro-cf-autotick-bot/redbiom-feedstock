@@ -11,18 +11,18 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - redbiom=redbiom.commands:cli
 
 requirements:
   host:
-    - python >=3.5
+    - python {{ python_min }}
     - pip
     - numpy
 
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - click
     - h5py
     - {{ pin_compatible('numpy') }}
@@ -35,6 +35,8 @@ requirements:
     - scikit-bio >=0.4.2
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - redbiom
     - redbiom.admin
